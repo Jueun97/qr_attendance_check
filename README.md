@@ -49,21 +49,11 @@
 <img src="/images/readme/preview/qr1.png" width="500">
 
 ## 출석체크 과정
-
-### 1. 큐알코드 스캔
-<img src="/images/readme/preview/qr1.png" width="300">
-
-### 2. 사용자정보 등록 후 출석체크 진행
-<img src="/images/readme/preview/main_m.jpg" width="300" height="250">
-
-### 3. 출석완료
-<img src="/images/readme/preview/main_m2.jpg" width="300" height="250">
-
-### 4. 큐알코드 페이지에서 출석완료 메시지 출력
-<img src="/images/readme/preview/qr2.png" width="300">
-
-
-
+|<h3>1. 큐알코드 스캔</h3>|<h3>2. 사용자정보 등록 후 <br>출석체크 진행</h3>|
+|:--:|:--:|
+|<img src="/images/readme/preview/qr1.png" width="300">|<img src="/images/readme/preview/main_m.jpg" width="300" height="250">|
+|<h3>3. 출석완료</h3>|<h3>4. 큐알코드 페이지에서 <br> 출석완료 메시지 출력</h3>|
+|<img src="/images/readme/preview/main_m2.jpg" width="300" height="250">|<img src="/images/readme/preview/qr2.png" width="300">|
 
 
 
