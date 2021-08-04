@@ -47,8 +47,6 @@
         audio.currentTime = 0;
         audio.play();
         });
-
-	//0404 update : console.log
 	console.log("qrCode.html... id: ", id); 	
 
         switch(id){
@@ -80,12 +78,11 @@
             console.log(unescape(data));
             onChecked(data);
 	    
-	    //0404 update : init name
 	    data = "";
 	    console.log("name: ", data,id);
         });
         function onChecked(data) {
-	    //0404 update : console.log
+
 	    let now = new Date();
 	    let hour = now.getHours();
 	    let min = now.getMinutes();

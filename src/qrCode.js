@@ -20,17 +20,14 @@ app.get('/', (req, res) => {
     _url = '/html/qrCode.html';
     res.sendFile(__dirname + _url);
 })
-let i = 0;
-let id = '';
 io.on('connection', function (socket) {
     app.post('/', (req, res) => {
         const id = req.body.id;
-        let name = req.body.name; 	
+        let name = req.body.name;
 	
-	//0404 update : console.log
-	console.log(".",id);
+        console.log(".", id);
 
-	switch (id) {
+        switch (id) {
             case '1':
                 io.emit('check1', name);
                 break;
@@ -39,8 +36,8 @@ io.on('connection', function (socket) {
                 break;
             case '3':
                 io.emit('check3', name);
-		break;
-	    case '4':
+                break;
+            case '4':
                 io.emit('check4', name);
                 break;
             case '5':
@@ -49,15 +46,12 @@ io.on('connection', function (socket) {
             case '6':
                 io.emit('check6', name);
                 break;
-	    default:
-		console.log("switch-default");
-		console.log("name:", unescape(name));
-		break;
+            default:
+                console.log("switch-default");
+                console.log("name:", unescape(name));
+                break;
         }
 	
-	//0404 update : init name
-	//name = "";
-	//console.log("name :", name);
     })
 });
 
