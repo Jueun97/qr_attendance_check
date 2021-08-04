@@ -21,7 +21,7 @@ function deleteDate(event) {
     console.log("date : ", date);
 
     if(confirm(`${date}를 삭제하겠습니까?`) === true) {
-        fetch(`http://193.123.254.109:3000/delete__date`, {
+        fetch(`http://localhost:3000/delete__date`, {
             method : 'POST',
             headers : {
                 Accept : 'application/json',
@@ -46,7 +46,7 @@ function getDateUpdate(oldDate) {
         newDate = prompt("변경할 날짜를 입력해주세요. (yyyymmdd)", "");
 
 	if(confirm(`${oldDate}를 ${newDate}로 수정하겠습니까?`) === true) {
-        fetch(`http://193.123.254.109:3000/update__date`, {
+        fetch(`http://localhost:3000/update__date`, {
 		    method : 'POST',
 		    headers : {
 		        Accept : 'application/json',
@@ -160,7 +160,7 @@ function updateSelect(eventValue) {
 	console.log("###", eventYear, eventName, eventDate, StringValue);
 
 	if(confirm(`${eventYear} ${eventName}의 ${eventDate}의 출석정보를 ${StringValue}로 변경하겠습니까?`) === true) {
-	    fetch(`http://193.123.254.109:3000/update__week`, {
+	    fetch(`http://localhost:3000/update__week`, {
 		method : 'POST',
 		headers : {
 		    Accept : 'application/json',
@@ -253,7 +253,7 @@ function checkNull() {
                 event.target.dataset.current = 'on';
                 document.cookie = 'attendance=on';
             }
-       fetch(`http://193.123.254.109:3000/status`, {
+       fetch(`http://localhost:3000/status`, {
 		method : 'POST',
                 headers : {
 			Accept : 'application/json',
@@ -265,7 +265,7 @@ function checkNull() {
                     })
         })
 function loadFriends() {
-    return fetch("http://193.123.254.109:3000/information").then(response => response.json());
+    return fetch("http://localhost:3000/information").then(response => response.json());
 }
 
 
@@ -426,7 +426,7 @@ loadFriends().then(items => {
                     console.log("new", newName, newBirthYear);
 
                     if (confirm(`${newBirthYear} ${newName} (으)로 정말로 수정하겠습니까?`) === true) {
-                        fetch(`http://193.123.254.109:3000/update`, {
+                        fetch(`http://localhost:3000/update`, {
                             method: 'POST',
                             headers: {
                                 Accept: 'application/json',
@@ -458,7 +458,7 @@ loadFriends().then(items => {
             let deleteBirthYear = event.target.getAttribute('data-birth');
         
             if (confirm(`${deleteName} 님을 정말로 삭제하겠습니까?`) == true) {
-                fetch(`http://193.123.254.109:3000/delete`, {
+                fetch(`http://localhost:3000/delete`, {
                     method: 'POST',
                     headers: {
                         Accept: 'application/json',

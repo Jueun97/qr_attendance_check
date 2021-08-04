@@ -33,12 +33,9 @@ function weekCount(today) {
     return week;
 }
 
-//0614 update
 let newToday = new Date();
-let newYear = newToday.getFullYear();
 let newMonth = newToday.getMonth() + 1;
 let newDate = newToday.getDate();
-let newString = String(newYear) + String(newMonth) + String(newDate);
 
 newMonth = newMonth >= 10 ? newMonth : '0' + newMonth;
 newDate = newDate >= 10 ? newDate : '0' + newDate;
@@ -64,11 +61,8 @@ app.get('/', async (req, res) => {
                 _url = '/html/exception.html';
         }
         else if (req.cookies.name) {
-            const name = unescape(req.cookies.name);
-            const birthYear = req.cookies.year;
             try {
-                //0614 update
-                const result = await pool.query(`CALL insert_checkinfo('${name}','${birthYear}','${newString}', @ERCODE)`);
+                
                 res.cookie('status', 'accepted', { expires: statusExpiredDate });
                 _url = '/html/approval.html';
             } catch (err) {

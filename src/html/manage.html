@@ -17,11 +17,10 @@
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.14.3/xlsx.full.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/1.3.8/FileSaver.min.js"></script>
-    <script src="manage.js" defer></script>
+    <script src="js/manage.js" defer></script>
     <link rel="stylesheet" href="./style.css">
-    
    <script>
-	var excelHandler = {
+	let excelHandler = {
 	    getExcelFileName : function() {
 		return 'kcQrcodeCheck.xlsx';
 	    },
@@ -35,6 +34,12 @@
 		return XLSX.utils.table_to_sheet(this.getExcelData());
 	    }
 	}
+
+    function deleteDateFunction() {
+	if(confirm('정말로 삭제하겠습니까?') === true) {
+	    alert('삭제되었습니다!');
+	    window.location.reload();
+	}}
    </script> 
 
 </head>
@@ -121,13 +126,5 @@
     </table>
 </div>
 </div>
-
-<script>
-    function deleteDateFunction() {
-	if(confirm('정말로 삭제하겠습니까?') === true) {
-	    alert('삭제되었습니다!');
-	    window.location.reload();
-	}
-</script>
 </body>
 </html>
