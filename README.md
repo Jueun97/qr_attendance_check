@@ -11,9 +11,9 @@
 
 
 ### 2. Back-end
-|<img src="images/readme/logo/node.png" width="150" height="150">|<img src="images/readme/logo/express.png" width="150" height="150">|<img src="images/readme/logo/mysql.png" width="150" height="150">|<img src="images/readme/logo/socket.png" width="150" height="150">|
-|:---:|:--:|:--:|:--:|
-|Node.js|express|MySQL|socket|
+|<img src="images/readme/logo/node.png" width="150" height="150">|<img src="images/readme/logo/express.png" width="150" height="150">|<img src="images/readme/logo/mysql.png" width="150" height="150">|<img src="images/readme/logo/socket.png" width="150" height="150">|<img src="images/readme/logo/oracle.jpeg" width="150" height="150">|
+|:---:|:--:|:--:|:--:|:--:|
+|Node.js|express|MySQL|socket|Oracle Cloud|
 
 
 ## 주요 기능
