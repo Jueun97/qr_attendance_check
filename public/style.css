@@ -1,3 +1,106 @@
+html{
+    height: 100%;
+}
+body{
+    text-align: center;
+    background-color: #f3e0a0;
+    height: 100%;
+    margin:0;
+}
+header{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10%;
+    margin: 5px 20px;
+}
+a{
+    color: black;
+}
+.header__icon{
+    font-size: 40px;
+}
+.container{
+    width: 60%;
+    padding:10px;
+    border:3px solid black;
+    border-radius: 10px;
+    background-color: #73b676;
+    margin: auto;
+    margin-top: 100px;
+}
+.userInfo{
+    font-size: 5em;
+}
+.message{
+    font-size: 5em;
+}
+.passwordContainer{
+    display: none;
+    width: 30%;
+    height: 20%;
+    margin:auto;
+}
+.passwordContainer-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.password{
+   width: 100%;
+   height: 90%;
+    border-radius: 10px;
+    background-color: #73b676;
+    border:3px solid black;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.password-title{
+    font-size: 1.5em;
+    font-weight: bold;
+}
+.password-input{
+    width: 80%;
+    height: 20%;
+    font-size: 1em;
+    list-style: none;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+.password-submit{
+    width: 20%;
+    height: 100%;
+    margin-top: 10px;
+    border-radius: 10px;
+    margin-left:5px;
+}
+.result{
+    font-size: 100px;
+}
+.form{
+    height: 90%;
+    margin:auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;;
+    width: 50%;
+}
+.form__item{
+    margin-top: 30px;
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid black;
+    list-style: none;
+    background-color: rgb(252, 248, 235);
+}
+#submit{
+    background-color: #73b676;
+}
 #manageTitle {
     color: #555555;
     font-size: 50px;
@@ -17,7 +120,6 @@
     text-align: center;
     overflow-x: auto;
     height: 660px;
-    //0328 update : fixed column
     overflow-y: scroll;
 }
 
@@ -36,14 +138,10 @@
     z-index: 2;
 }
 
-//0328 update : fixed column
 .td-pin {
     position: sticky;
     left: 0;
-    //z-index: 1;
 }
-
-
 #delete-date-button,
 #open-close-button,
 #excel-button,
@@ -52,12 +150,48 @@
    width : 127px;
    text-align : center;
 }
-
-
 #create-date-div {
     width: 300px;
     margin: 10px auto;
     text-align: center; 
 }
 
+@media screen and (max-width:650px){
+    .container{
+        border:2px solid black;
+        width: 70%;
+    }
+    .userInfo{
+        font-size: 2.5em;
 
+    }
+    .message{
+        font-size: 2.5em;
+    }
+}
+
+@media screen and (max-width:450px){
+    .passwordContainer{
+        display: none;
+        width: 70%;
+        height: 30%;
+        margin:auto;
+    }
+    .passwordContainer-button{
+        width: 100%;
+    }
+    .password-submit{
+        width: 30%;
+        height: 80%;
+        margin-top: 10px;
+        border-radius: 10px;
+    }
+}    
+@media screen and (max-width:300px){
+    .passwordContainer{
+        display: none;
+        width: 90%;
+        height: 20%;
+        margin:auto;
+    }
+}
